@@ -1,0 +1,40 @@
+// An example aspect which wraps a Foo component,
+// the enabled state of a Bar component,
+// and the components of the TransformAspect.
+    public readonly partial struct #SCRIPTNAME# : IAspect
+    {
+        // The aspect includes the entity ID.
+        // Because it's a readonly value type,
+        // there's no danger in making the field public.
+        // public readonly Entity Entity;
+
+        // The aspect includes the Foo component,
+        // with read-write access.
+        // private readonly RefRW<Foo> foo;
+
+        // A property which gets and sets the Speed.
+        // public float3 Foo
+        // {
+        //     get => foo.ValueRO.Value;
+        //     set => foo.ValueRW.Value = value;
+        // }
+
+        // The aspect includes the enabled state of
+        // the Bar component.
+        // public readonly EnabledRefRW<Bar> BarEnabled;
+
+        // The aspect includes Unity.Entities.TransformAspect.
+        // This means MyAspect indirectly includes
+        // all the components of TransformAspect.
+        // private readonly TransformAspect transform;
+
+        // A property which gets and sets the position of the transform.
+        // The TransformAspect is otherwise kept private,
+        // so users of MyAspect will only be able to
+        // read and modify the position.
+        // public float3 Position
+        // {
+        //     get => transform.Position;
+        //     set => transform.Position = value;
+        // }
+    }

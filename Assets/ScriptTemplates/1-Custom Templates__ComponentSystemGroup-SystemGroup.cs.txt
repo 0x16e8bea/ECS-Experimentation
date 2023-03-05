@@ -1,0 +1,5 @@
+public class #SCRIPTNAME# : ComponentSystemGroup
+{
+    // A system group is left empty unless you want
+    // to override OnUpdate, OnCreate, or OnDestroy.
+}

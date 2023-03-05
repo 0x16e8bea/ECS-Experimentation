@@ -1,0 +1,25 @@
+// The baker for our EnergyShield authoring component.
+// For every GameObject in an entity subscene, baking creates a
+// corresponding entity. This baker is run once for every
+// EnergyShieldAuthoring instance that's attached to any GameObject in
+// the entity subscene.
+public class #SCRIPTNAME#Baker : Baker<#SCRIPTNAME#>
+{
+    public override void Bake(#SCRIPTNAME# authoring)
+    {
+        // This simple baker adds just one component to the entity.
+        // AddComponent(new EnergyShield {
+            // HitPoints = authoring.MaxHitPoints,
+            // MaxHitPoints = authoring.MaxHitPoints,
+            // RechargeDelay =  authoring.RechargeDelay,
+            // RechargeRate = authoring.RechargeRate,
+        // });    
+    }
+}
+
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    // public float MaxHitPoints;
+    // public float RechargeDelay;
+    // public float RechargeRate;
+}
